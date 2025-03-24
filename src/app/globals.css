@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  @apply text-4xl font-semibold md:text-5xl;
+}
+h2 {
+  @apply text-2xl font-semibold md:text-3xl;
+}
+h3 {
+  @apply text-xl font-medium md:text-2xl;
+}
+h4 {
+  @apply text-lg font-medium md:text-xl;
+}
+p,
+li,
+button,
+a,
+span {
+  @apply text-sm text-gray-700 md:text-base;
+}
+.btn{
+  @apply font-semibold;
+}
+.p2 {
+  @apply text-base md:text-lg;
+}
+strong {
+  @apply font-semibold;
+}
+.gapt-1 {
+  @apply mt-4;
+}
+.gapt-2 {
+  @apply mt-6;
+}
+.gapt-3 {
+  @apply mt-10;
+}
+.gapt-4 {
+  @apply mt-14;
+}
+.h3{
+  @apply text-xl font-medium md:text-2xl;
+}
+.darkbg{
+  @apply bg-slate-100
+}
