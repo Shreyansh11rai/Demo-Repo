@@ -4,7 +4,6 @@ import OurServices from "@/components/home-page-comp/OurServices";
 import Testimonials from "@/components/home-page-comp/Testimonials";
 import WhyUs from "@/components/home-page-comp/WhatWeDo";
 import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
 
 export const metadata = {
   title: 'Vksoft Best Website Developing Agency',
@@ -14,7 +13,6 @@ export const metadata = {
 export default function Home() {
   return (
     <main>
-      <h1>Hello git</h1>
         <HeroSection/>
         <WhyUs/>
         <OurServices/>
