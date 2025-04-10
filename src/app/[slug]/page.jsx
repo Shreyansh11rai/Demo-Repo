@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Wrapper from "@/components/Wrapper";
+import Wrapper from "@/components/Container";
 import { BoldBtn } from "@/components/Buttons";
 import { notFound } from "next/navigation";
 import pageData from "../../lib/servicess-data";

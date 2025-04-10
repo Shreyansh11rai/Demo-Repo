@@ -1,6 +1,5 @@
-// server comp 
 import React from "react";
-import Wrapper from "../Wrapper";
+import Wrapper from "../Container";
 import Desktopnav from "./DesktopNav";
 import { BoldBtn, LightBtn } from "../Buttons";
 import Hamburger from "./Hamburger";

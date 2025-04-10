@@ -1,7 +1,7 @@
 "use client";
 import React, { useCallback, useState } from "react";
 import SubMenu from "./SubMenu";
-import Wrapper from "../Wrapper";
+import Wrapper from "../Container";
 import navlist from "../../lib/nav-list";
 import Image from "next/image";
 import Link from "next/link";

@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import { BoldBtn } from "../Buttons";
-import Wrapper from "../Wrapper";
+import Wrapper from "../Container";
 
 export default function Hero() {
   return (

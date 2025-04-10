@@ -1,5 +1,5 @@
 import CapsuleHeading from "../CapsuleHeading";
-import Wrapper from "../Wrapper";
+import Wrapper from "../Container";
 import Wrapper2 from "../Wrapper2";
 import UserCard from "./UserCard";
 

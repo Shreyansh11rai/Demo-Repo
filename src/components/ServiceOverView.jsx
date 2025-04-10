@@ -1,4 +1,4 @@
-import Wrapper from "@/components/Wrapper";
+import Wrapper from "@/components/Container";
 import TextContainer from "@/components/TextContainer";
 import CapsuleHeading from "./CapsuleHeading";
 import Wrapper2 from "./Wrapper2";
