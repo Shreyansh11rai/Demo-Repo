@@ -15,7 +15,7 @@ export default function UserCard({ name, image, comment, post }) {
         {/* User Image */}
         <div className="h-12 w-12 overflow-hidden rounded-full">
           <Image
-            src={"/images/brand_vksoft.png"}
+            src={"/website-services/brand_vksoft.png"}
             height={80}
             width={80}
             className="h-full w-full object-cover"

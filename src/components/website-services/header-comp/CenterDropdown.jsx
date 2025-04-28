@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-const SubMenu = ({ navlist, activeList }) => {
+const CenterDropdown = ({ navlist, activeList }) => {
   return (
-    <ul className="col-span-4 rounded-e-md bg-white p-6">
+    <ul className="col-span-4 rounded-e-md bg-white p-6 h-[25rem]">
       {navlist.map((ele, ind) => (
         <li
           key={ind}
@@ -15,7 +15,7 @@ const SubMenu = ({ navlist, activeList }) => {
               return (
                 <Link
                   key={index}
-                  href={slug}
+                  href={`/${slug}`}
                   className="flex items-center justify-between border-b border-gray-400 hover:font-medium hover:text-black"
                 >
                   <svg
@@ -37,4 +37,4 @@ const SubMenu = ({ navlist, activeList }) => {
   );
 };
 
-export default SubMenu;
+export default CenterDropdown;

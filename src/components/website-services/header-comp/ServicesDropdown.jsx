@@ -1,8 +1,8 @@
 "use client";
 import React, { useCallback, useState } from "react";
-import SubMenu from "./SubMenu";
-import Wrapper from "../Container";
-import navlist from "../../lib/nav-list";
+import CenterDropdown from "@/components/website-services/header-comp/CenterDropdown";
+import Container from "@/components/website-services/Container";
+import navlist from "@/lib/nav-list";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -28,10 +28,10 @@ const HandleList = () => {
 
       {/* nav container  */}
       <div className="top-13 invisible absolute left-0 z-50 w-full scale-75 rounded-lg pt-10 opacity-0 transition-all duration-200 group-hover:visible group-hover:scale-100 group-hover:opacity-100">
-        <Wrapper>
-          <div className="grid w-[100%] grid-cols-12 rounded-3xl p-6">
+        <Container className={"bg-gray-300 max-w-[70rem] rounded-2xl md:px-10 md:py-5 shadow-2xl"}>
+          <div className="grid w-[100%] grid-cols-12 rounded-3xl">
             {/* Left Navigation List */}
-            <ul className="col-span-4 flex h-[30rem] flex-col gap-3 rounded-s-md border-r-2 border-gray-300 bg-white p-6">
+            <ul className="col-span-4 flex h-[25rem] flex-col gap-3 rounded-s-md border-r-2 border-gray-300 bg-white p-6">
               {navlist.map((menu, index) => (
                 <li 
                 key={index + "btn"}
@@ -55,19 +55,19 @@ const HandleList = () => {
               ))}
             </ul>
             {/* Center Content */}
-            <SubMenu navlist={navlist} activeList={activeList} />
+            <CenterDropdown navlist={navlist} activeList={activeList} />
             {/* image container  */}
-            <div className="col-span-4 ml-2 overflow-hidden rounded-lg bg-white">
+            <div className="col-span-4 ml-2 overflow-hidden rounded-lg bg-white h-[25rem]">
               <Image
-                height={800}
-                width={700}
-                src="/images/nav-side.jpeg"
+                height={400}
+                width={300}
+                src="/website-services/nav-side.jpeg"
                 alt="Service Image"
                 className="h-auto w-full object-cover"
               />
             </div>
           </div>
-        </Wrapper>
+        </Container>
       </div>
     </li>
   );

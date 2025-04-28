@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-sitemap",
     "start": "next start",
     "lint": "next lint",
-    "static":"serve -s out -p 3000"
+    "static": "serve -s out -p 3000"
   },
   "dependencies": {
     "gsap": "^3.12.7",
@@ -18,9 +18,11 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@next/bundle-analyzer": "^15.3.1",
     "autoprefixer": "^10.4.20",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
+    "next-sitemap": "^4.2.3",
     "postcss": "^8.5.2",
     "prettier": "^3.5.2",
     "prettier-plugin-tailwindcss": "^0.6.11",

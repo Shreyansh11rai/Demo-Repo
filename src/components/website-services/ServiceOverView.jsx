@@ -1,5 +1,5 @@
-import Wrapper from "@/components/Container";
-import TextContainer from "@/components/TextContainer";
+import Wrapper from "@/components/website-services/Container";
+import TextContainer from "@/components/website-services/TextContainer";
 import CapsuleHeading from "./CapsuleHeading";
 import Wrapper2 from "./Wrapper2";
 

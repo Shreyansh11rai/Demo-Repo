@@ -2,9 +2,9 @@ const pageData = [
   {
     "title": "Static Websites",
     "description": "Get a fast, secure, and cost-effective static website tailored to your business needs.",
+    "image" : "/website-services/approach.png",
     "ctaText": "Get a Free Quote",
     "ctaLink": "/contact",
-    "image": "/images/static-website.svg",
     "whyChooseUs": [
       "Blazing Fast Load Speed",
       "Highly Secure & No Database Required",
@@ -93,9 +93,9 @@ const pageData = [
   {
     "title": "Dynamic Websites",
     "description": "Build a feature-rich and interactive dynamic website that adapts to user needs.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get a Free Quote",
     "ctaLink": "/contact",
-    "image": "/images/dynamic-website.svg",
     "whyChooseUs": [
       "User-Friendly & Interactive",
       "Real-Time Data & Content Updates",
@@ -184,9 +184,9 @@ const pageData = [
   {
     "title": "CMS-Based Websites",
     "description": "Effortlessly manage and update your website with our user-friendly CMS solutions.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get a Free Quote",
     "ctaLink": "/contact",
-    "image": "/images/cms-website.svg",
     "whyChooseUs": [
       "Easy Content Management",
       "Customizable & Scalable",
@@ -275,9 +275,9 @@ const pageData = [
   {
     "title": "Web & Mobile Apps",
     "description": "Build high-performance web and mobile applications for a seamless user experience.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get a Free Quote",
     "ctaLink": "/contact",
-    "image": "/images/web-mobile-apps.svg",
     "whyChooseUs": [
       "Cross-Platform Compatibility",
       "User-Centric UI/UX Design",
@@ -366,9 +366,9 @@ const pageData = [
   {
     "title": "Website Templates",
     "description": "Get professionally designed website templates that are fully customizable and optimized for performance.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get a Free Quote",
     "ctaLink": "/contact",
-    "image": "/images/website-templates.svg",
     "whyChooseUs": [
       "Modern & Responsive Designs",
       "SEO & Performance Optimized",
@@ -457,9 +457,9 @@ const pageData = [
   {
     "title": "Email Templates",
     "description": "Boost engagement with responsive and beautifully designed email templates.",
+    "image" : "//website-services/ui-ux.svg",
     "ctaText": "Get a Free Quote",
     "ctaLink": "/contact",
-    "image": "/images/email-templates.svg",
     "whyChooseUs": [
       "Fully Responsive Designs",
       "Compatible with All Email Clients",
@@ -548,9 +548,9 @@ const pageData = [
   {
     "title": "E-commerce Templates",
     "description": "Get stunning e-commerce templates optimized for conversions and user experience.",
+    "image" : "//website-services/ui-ux.svg",
     "ctaText": "Get a Free Quote",
     "ctaLink": "/contact",
-    "image": "/images/ecommerce-templates.svg",
     "whyChooseUs": [
       "High-Converting Designs",
       "SEO & Speed Optimized",
@@ -639,9 +639,9 @@ const pageData = [
   {
     "title": "Admin Panel Templates",
     "description": "Efficiently manage your applications with our well-structured and intuitive admin panel templates.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get a Free Quote",
     "ctaLink": "/contact",
-    "image": "/images/admin-panel-templates.svg",
     "whyChooseUs": [
       "User-Friendly Dashboard",
       "Optimized for Performance",
@@ -730,9 +730,9 @@ const pageData = [
   {
     "title": "Landing Page Templates",
     "description": "Boost conversions with our high-performing landing page templates tailored for marketing success.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get a Free Quote",
     "ctaLink": "/contact",
-    "image": "/images/landing-page-templates.svg",
     "whyChooseUs": [
       "Conversion-Optimized Design",
       "Fast Loading Speed",
@@ -760,8 +760,8 @@ const pageData = [
         "description": "Responsive layouts ensure seamless user experience across all devices."
       },
       {
+        "image" : "/website-services/ui-ux.svg",
         "title": "Easy Customization",
-        "description": "Modify text, images, and layout to match your brand."
       }
     ],
     "pricing": [
@@ -821,9 +821,9 @@ const pageData = [
   {
     "title": "NopCommerce Development",
     "description": "Build a feature-rich and scalable e-commerce store with our NopCommerce development services.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get a Free Quote",
     "ctaLink": "/contact",
-    "image": "/images/nopcommerce-development.svg",
     "whyChooseUs": [
       "Custom NopCommerce Solutions",
       "SEO & Performance Optimized",
@@ -912,9 +912,9 @@ const pageData = [
   {
     "title": "Joomla E-commerce",
     "description": "Enhance your online store with Joomla-powered e-commerce solutions for a seamless shopping experience.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get a Free Quote",
     "ctaLink": "/contact",
-    "image": "/images/joomla-ecommerce.svg",
     "whyChooseUs": [
       "Custom Joomla Store Development",
       "Secure & Scalable",
@@ -1003,9 +1003,9 @@ const pageData = [
   {
     "title": "Shopify Solutions",
     "description": "Create a high-performing Shopify store with our expert development and customization services.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get a Free Quote",
     "ctaLink": "/contact",
-    "image": "/images/shopify-solutions.svg",
     "whyChooseUs": [
       "Custom Shopify Store Design",
       "SEO & Performance Optimized",
@@ -1094,9 +1094,9 @@ const pageData = [
   {
     "title": "WordPress Blogs",
     "description": "Create a powerful and SEO-friendly blog with our expert WordPress development services.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get a Free Quote",
     "ctaLink": "/contact",
-    "image": "/images/wordpress-blogs.svg",
     "whyChooseUs": [
       "Custom WordPress Blog Design",
       "SEO & Speed Optimized",
@@ -1185,9 +1185,9 @@ const pageData = [
   {
     "title": "Ghost Blogging Platforms",
     "description": "Build a fast, minimalist, and SEO-friendly blog with our Ghost CMS development services.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get a Free Quote",
     "ctaLink": "/contact",
-    "image": "/images/ghost-blogging.svg",
     "whyChooseUs": [
       "Lightweight & High-Performance",
       "SEO & Content Optimization",
@@ -1276,9 +1276,9 @@ const pageData = [
   {
     "title": "Domain Registration",
     "description": "Secure your brand’s online presence with hassle-free domain registration services.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Register Your Domain",
     "ctaLink": "/contact",
-    "image": "/images/domain-registration.svg",
     "whyChooseUs": [
       "Wide Range of TLDs Available",
       "Easy Domain Management",
@@ -1367,9 +1367,9 @@ const pageData = [
   {
     "title": "Web Hosting",
     "description": "Reliable and high-performance web hosting solutions tailored to your business needs.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get Hosting Now",
     "ctaLink": "/contact",
-    "image": "/images/web-hosting.svg",
     "whyChooseUs": [
       "99.9% Uptime Guarantee",
       "Fast & Secure Servers",
@@ -1460,9 +1460,9 @@ const pageData = [
   {
     "title": "SSL Certificates",
     "description": "Enhance security and trust with SSL certificates for your website.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get an SSL Certificate",
     "ctaLink": "/contact",
-    "image": "/images/ssl-certificates.svg",
     "whyChooseUs": [
       "Secure Your Website & Data",
       "Improve SEO Rankings",
@@ -1551,9 +1551,9 @@ const pageData = [
   {
     "title": "Email Hosting",
     "description": "Reliable and secure email hosting solutions for businesses of all sizes.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get Email Hosting",
     "ctaLink": "/contact",
-    "image": "/images/email-hosting.svg",
     "whyChooseUs": [
       "Professional Business Emails",
       "Secure & Spam-Free Inbox",
@@ -1642,9 +1642,9 @@ const pageData = [
   {
     "title": "Professional Business Emails",
     "description": "Boost your brand with professional business emails powered by secure and reliable hosting.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get Business Emails",
     "ctaLink": "/contact",
-    "image": "/images/business-emails.svg",
     "whyChooseUs": [
       "Custom Email with Your Domain",
       "Enterprise-Level Security",
@@ -1733,9 +1733,9 @@ const pageData = [
   {
     "title": "Cloud Setup & Hosting",
     "description": "Reliable cloud hosting solutions tailored to your business needs for maximum performance and scalability.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Get Cloud Hosting",
     "ctaLink": "/contact",
-    "image": "/images/cloud-hosting.svg",
     "whyChooseUs": [
       "High-Speed & Scalable Cloud Hosting",
       "99.9% Uptime with Auto Backups",
@@ -1772,9 +1772,9 @@ const pageData = [
   {
     "title": "Cloud Migration & Management",
     "description": "Seamless cloud migration and management services for businesses looking to move to the cloud efficiently.",
+    "image" : "/website-services/ui-ux.svg",
     "ctaText": "Migrate to Cloud",
     "ctaLink": "/contact",
-    "image": "/images/cloud-migration.svg",
     "whyChooseUs": [
       "Expert-Led Cloud Migration",
       "Minimal Downtime & Data Loss",

@@ -37,7 +37,7 @@ export default function Hero() {
             height={500}
             width={500}
             priority
-            src={"images/hero_2.svg"}
+            src={"website-services/hero_2.svg"}
             alt="heroSectionImage"
           />
         </div>

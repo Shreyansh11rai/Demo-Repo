@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import NavList from "./NavLinks";
+import ServicesDropdown from "./ServicesDropdown";
 
 const DesktopNav = () => {
   return (
@@ -17,7 +17,7 @@ const DesktopNav = () => {
           </Link>
         </li>
         {/* Dropdown Navigation */}
-        <NavList />
+        <ServicesDropdown />
         <li>
           <Link className="hover:text-black" href="/">
             Contact

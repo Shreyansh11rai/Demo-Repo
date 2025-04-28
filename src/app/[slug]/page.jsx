@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Wrapper from "@/components/Container";
-import { BoldBtn } from "@/components/Buttons";
+import Wrapper from "@/components/website-services/Container";
+import { BoldBtn } from "@/components/website-services/Buttons";
 import { notFound } from "next/navigation";
-import pageData from "../../lib/servicess-data";
+import pageData from "../../lib/services-data";
 
 export async function generateStaticParams() {
   return pageData.map((page) => ({
@@ -33,9 +33,9 @@ export default async function page({ params }) {
           </div>
 
           {/* Image */}
-          <div className="my-10 justify-center bg-blue-500 rounded-lg overflow-hidden hidden lg:flex">
+          <div className="my-10 justify-center bg-slate-500 rounded-lg overflow-hidden hidden lg:flex">
             <Image
-              src="/images/img_809.jpeg"
+              src="/website-services/custom-web.svg"
               alt={service.title}
               width={400}
               height={300}

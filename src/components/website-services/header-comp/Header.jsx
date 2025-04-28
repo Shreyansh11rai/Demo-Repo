@@ -13,7 +13,7 @@ const Header = () => {
         <div className="logo flex items-center gap-3">
           <img
             className="h-12 w-12 object-cover sm:h-16 sm:w-16"
-            src="/images/brand_vksoft.png"
+            src="/website-services/brand_vksoft.png"
             alt="brand_logo"
           />
           <Link href={"/"} className="relative -left-7 text-xl font-bold tracking-wide sm:text-2xl md:text-3xl">
@@ -27,7 +27,6 @@ const Header = () => {
           <BoldBtn text={"Get quote"} />
           <LightBtn text={"Have Questions ?"} className={"hidden lg:block"} />
           {/* hamburger */}
-          {/* client Comp  */}
           <Hamburger/>
         </div>
       </header>

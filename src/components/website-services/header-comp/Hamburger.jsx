@@ -1,5 +1,5 @@
 "use client";
-import navlist from "../../lib/nav-list";
+import navlist from "@/lib/nav-list";
 import Link from "next/link";
 import { useState } from "react";
 
