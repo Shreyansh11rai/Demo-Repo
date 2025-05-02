@@ -1,7 +1,8 @@
 "use client";
-import navlist from "@/lib/nav-list";
+import { headerData } from "@/data/homepage-data/headerData";
 import Link from "next/link";
 import { useState } from "react";
+
 
 export default function Hamburger({}) {
   const [mobNav, setMobNav] = useState(false);
@@ -33,11 +34,14 @@ export default function Hamburger({}) {
         className={`absolute right-0 top-0 z-50 flex w-[100vw] cursor-pointer items-center justify-center bg-gray-200 transition-all duration-500 ease-out ${mobNav ? "h-[100dvh]" : "h-0 overflow-hidden"}`}
       >
         <ul className="flex w-[90%] flex-col items-end gap-4 font-medium *:w-full *:border-b *:border-gray-700 *:pr-2 *:text-right *:text-xl">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          {/* Services Dropdown */}
-          <li className="flex flex-col items-end">
+          {headerData.navigation.map((item, index) => {
+            return !item.dropdown ? 
+            // if dropdown true isnt found it'll render normal link
+            <li key={index}>
+              <Link href={item.href}>{item.name}</Link>
+            </li> : 
+            // if dropdown true is found it'll render dropdown
+          <li className="flex flex-col items-end" key={index}>
             {/* btn to open submenu  */}
             <button
               onClick={() => setOpenService(!openService)}
@@ -53,7 +57,7 @@ export default function Hamburger({}) {
               >
                 <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
               </svg>
-              Services
+              {item.name}
             </button>
             {/* main submenu container*/}
             <ul
@@ -62,10 +66,10 @@ export default function Hamburger({}) {
               } my-2 flex w-full flex-col items-end gap-3 overflow-y-auto rounded-md px-2 text-lg text-gray-700`}
             >
               {/* array of nav list  */}
-              {navlist.map((menu, index) => (
+              {item.dropdownData.map((item, index) => (
                 // one submenu container
                 <li
-                  key={index}
+                key={index}
                   className="flex w-full flex-col items-end gap-2"
                 >
                   <button
@@ -82,7 +86,7 @@ export default function Hamburger({}) {
                     >
                       <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
                     </svg>
-                    {menu.title}
+                    {item.title}
                   </button>
                   <ul
                     className={`overflow-hidden transition-all duration-300 ${
@@ -91,10 +95,11 @@ export default function Hamburger({}) {
                         : "max-h-0 opacity-0"
                     } flex flex-col items-end gap-1 text-base font-normal`}
                   >
-                    {menu.links.map((link, i) => (
-                      <li key={i} className="">
+                    {
+                      item.links.map((item,index)=>
+                      <li className="" key={index}>
                         <a
-                          href=""
+                          href={item.split(" ").join("-").toLocaleLowerCase()}
                           className="flex items-center justify-between gap-3"
                         >
                           <svg
@@ -105,22 +110,17 @@ export default function Hamburger({}) {
                           >
                             <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
                           </svg>
-                          {link}
+                          {item}
                         </a>
                       </li>
-                    ))}
+                      )
+                    }
                   </ul>
                 </li>
               ))}
             </ul>
           </li>
-
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
+          })}
         </ul>
         <button
           onClick={() => setMobNav(false)}

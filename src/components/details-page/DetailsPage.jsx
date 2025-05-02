@@ -1,24 +1,10 @@
 import Image from "next/image";
-import Wrapper from "@/components/website-services/Container";
-import { BoldBtn } from "@/components/website-services/Buttons";
-import { notFound } from "next/navigation";
-import pageData from "../../lib/services-data";
+import { BoldBtn } from "@/components/Buttons";
+import Container from "@/components/Container";
 
-export async function generateStaticParams() {
-  return pageData.map((page) => ({
-    slug: page.slug,
-  }));
-}
-
-export default async function page({ params }) {
-  const { slug } = await params;
-  const service = pageData.find((ele) => ele.slug === slug);
-  if (!service) {
-    return notFound();
-  }
-
-  return (
-    <Wrapper className={"py-2 pb-10"}>
+export default function DetailsPage({service}) {
+    return (
+        <Container className={"py-2 pb-10"}>
       <div className="container">
         <div className="flex flex-col lg:flex-row lg:items-center justify-around mx-auto max-w-5xl">
           {/* Hero Section */}
@@ -85,7 +71,7 @@ export default async function page({ params }) {
         </div>
 
         {/* Pricing Plans */}
-        <div className="mt-12">
+        <div className="mt-12" id="pricing">
           <h2 className="text-2xl font-semibold">Pricing Plans</h2>
           <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-3">
             {service.pricing.map((plan, index) => (
@@ -122,15 +108,15 @@ export default async function page({ params }) {
         </div>
 
         {/* Custom Package CTA */}
-        <div className="mt-12 flex flex-col gap-3 text-center py-10">
+        <div className="mt-12 flex flex-col gap-3 text-center py-10 items-center bg-slate-200 rounded-xl">
           <p className="text-lg font-semibold">{service.customPackageText}</p>
           <BoldBtn
             target={service.ctaLink}
             text={"Get a Custom Package"}
-            className={"mx-auto"}
+            className={"mx-auto w-60"}
           />
         </div>
       </div>
-    </Wrapper>
-  );
+    </Container>
+    )
 }

@@ -16,6 +16,10 @@ export default function TextContainer({data}) {
             data.link && data.target && <Link className="h3 hover:underline" href={linktarget}>{data.link}</Link>
           }
         <p className="mt-3 text-gray-600">{data.para}</p>
+        <div className="mt-3 *:underline flex gap-4 items-center">
+        <Link className="text-yellow-500" href={`/pricing`}>Pricing</Link>
+        <Link className="text-primaryclr" href={data.heading.split(" ").join("-").toLowerCase()}>Details</Link>
+        </div>
       </div>
   );
 }

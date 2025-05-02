@@ -5,17 +5,27 @@ export const BoldBtn = ({ text, className, target = "/" }) => {
   return (
     <Link
     href={target}
-      className={`btn rounded-lg border bg-primaryclr px-3 py-2 text-sm text-black transition-all duration-200 hover:scale-95 hover:border-blue-600 hover:bg-white hover:text-blue-600 sm:px-5 sm:py-3 sm:text-base md:text-lg lg:px-7 ${className}`}
+      className={`btn rounded-lg border bg-primaryclr px-3 py-2 text-black transition-all duration-200 hover:scale-95 hover:border-blue-600 hover:bg-white hover:text-blue-600 md:px-5 md:py-1${className}`}
     >
       {text}
     </Link>
+  );
+};
+export const AnchorBoldBtn = ({ text, className, target = "/" }) => {
+  return (
+    <a
+    href={target}
+      className={`btn rounded-lg border bg-primaryclr px-3 py-2 text-black transition-all duration-200 hover:scale-95 hover:border-blue-600 hover:bg-white hover:text-blue-600 md:px-10 md:py-3 ${className}`}
+    >
+      {text}
+    </a>
   );
 };
 
 export const LightBtn = ({ text, className, target = "/" }) => (
   <Link
   href={target}
-  className={`btn rounded-lg border-2 border-black px-3 py-2 transition-all duration-200 hover:scale-95 hover:bg-black hover:text-white sm:px-5 sm:py-3 lg:px-7 ${className}`}
+  className={`btn rounded-lg border-2 border-black px-3 py-2 transition-all duration-200 hover:scale-95 hover:bg-black hover:text-white ${className}`}
   >
     {text}
   </Link>

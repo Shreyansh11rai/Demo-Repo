@@ -1,4 +1,3 @@
-import Header from "../components/website-services/header-comp/Header";
 import "./globals.css";
 import {Poppins} from "next/font/google";
 
@@ -13,7 +12,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable}`}>
       <body className="font-body">
-        <Header/>
         {children}
       </body>
     </html>

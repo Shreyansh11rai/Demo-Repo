@@ -21,9 +21,6 @@ a,
 span {
   @apply text-sm text-gray-700 md:text-base;
 }
-.btn{
-  @apply font-semibold;
-}
 .p2 {
   @apply text-base md:text-lg;
 }

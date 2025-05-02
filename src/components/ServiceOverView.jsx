@@ -1,9 +1,9 @@
-import Wrapper from "@/components/website-services/Container";
-import TextContainer from "@/components/website-services/TextContainer";
+import Wrapper from "@/components/Container";
+import TextContainer from "@/components/TextContainer";
 import CapsuleHeading from "./CapsuleHeading";
 import Wrapper2 from "./Wrapper2";
 
-export default function ServiceOverView({ data }) {
+export default function ServiceOverView({ data,data2 }) {
   return (
     <Wrapper
       className={`max-w-[1100px] border-b border-gray-400 py-16 ${data.wrapperStyle}`}
@@ -11,7 +11,7 @@ export default function ServiceOverView({ data }) {
       {/* container  */}
       <Wrapper2 className={`${data.mainContainerStyle}`}>
         {/* capsule heading  */}
-        <CapsuleHeading text={data.capsuleHeading}/>
+        {data.capsuleHeading && <CapsuleHeading text={data2.capsuleHeading}/>}
         {/* left container  */}
         <div className="max-w-2xl">
           <h2 className="gapt-3 font-semibold capitalize">{data.mainHeading}</h2>

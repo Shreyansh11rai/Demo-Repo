@@ -1,10 +1,9 @@
 import Link from "next/link";
-import React from "react";
 
-const CenterDropdown = ({ navlist, activeList }) => {
+const CenterDropdown = ({ data, activeList }) => {
   return (
     <ul className="col-span-4 rounded-e-md bg-white p-6 h-[25rem]">
-      {navlist.map((ele, ind) => (
+      {data.map((ele, ind) => (
         <li
           key={ind}
           className={`transition-all duration-500 ${activeList !== ind ? "h-0 overflow-hidden" : "h-40"}`}
