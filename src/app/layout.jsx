@@ -1,3 +1,4 @@
+import Header from "@/components/header-comp/Header";
 import "./globals.css";
 import {Poppins} from "next/font/google";
 
@@ -6,17 +7,6 @@ const poppins = Poppins({
   weight: ['200','300', '400', '600','700','800'],
   variable: '--font-poppins',
 });
-
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en" className={`${poppins.variable}`}>
-      <body className="font-body">
-        {children}
-      </body>
-    </html>
-  );
-}
 
 export const metadata = {
   title: 'Page Title | Your Company Name',
@@ -64,3 +54,14 @@ export const metadata = {
     },
   },
 };
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className={`${poppins.variable}`}>
+      <body className="font-body">
+        <Header/>
+        {children}
+      </body>
+    </html>
+  );
+}

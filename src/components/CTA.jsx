@@ -1,11 +1,11 @@
 "use client";
 import { contactPageLink, enquiryLink, mobileNumberLink, whatsappLink } from "@/data/globalData";
-import { ctaData } from "@/data/homepage-data/ctaData";
+import { ctaData } from "@/data/homepage-data/ctaSectionData";
 import Link from "next/link";
 
-export default function CTA() {
+export default function CTA({className}) {
   return (
-    <section className=" py-16 px-6 text-center rounded-lg shadow-lg border-t border-gray-500">
+    <section className={`py-16 px-6 text-center rounded-lg shadow-lg border-t border-gray-500 ${className}`}>
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold">{ctaData.heading}</h2>
         <p className="mt-4 text-lg">

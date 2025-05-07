@@ -11,7 +11,7 @@ export default function ServiceOverView({ data,data2 }) {
       {/* container  */}
       <Wrapper2 className={`${data.mainContainerStyle}`}>
         {/* capsule heading  */}
-        {data.capsuleHeading && <CapsuleHeading text={data2.capsuleHeading}/>}
+        {data.capsuleHeading && <CapsuleHeading text={data.capsuleHeading}/>}
         {/* left container  */}
         <div className="max-w-2xl">
           <h2 className="gapt-3 font-semibold capitalize">{data.mainHeading}</h2>

@@ -16,8 +16,13 @@ export const pricingPlansData = [
       "✅ SSL Integration",
       "✅ Delivery in 3 Days",
     ],
-    buttonText: "Get Started",
-    buttonStyle: "bg-teal-600 hover:bg-teal-700",
+    targetAudience: "Freelancers, bloggers, or small businesses with minimal needs.",
+    highlights: [
+      "Affordable pricing for tight budgets",
+      "Quick delivery for urgent requirements",
+      "Simple and effective design",
+    ],
+    notes: "This package is ideal for those who need a basic online presence without complex features.",
   },
   {
     title: "Professional",
@@ -32,9 +37,14 @@ export const pricingPlansData = [
       "✅ GitHub Code Access",
       "✅ Delivery in 5-7 Days",
     ],
-    buttonText: "Choose Plan",
-    buttonStyle: "bg-cyan-600 hover:bg-cyan-700",
-    highlight: true, // To indicate this is the highlighted plan
+    targetAudience: "Small to medium-sized businesses looking to expand their online presence.",
+    highlights: [
+      "Advanced SEO for better visibility",
+      "Responsive design for all devices",
+      "Includes dynamic features for interactivity",
+    ],
+    notes: "This package is perfect for businesses that want a professional, multi-page website with advanced features.",
+    highlight: true,
   },
   {
     title: "Enterprise",
@@ -49,7 +59,57 @@ export const pricingPlansData = [
       "✅ Post-launch Support",
       "✅ Timeline based on scope",
     ],
-    buttonText: "Contact Us",
-    buttonStyle: "bg-teal-600 hover:bg-teal-700",
+    targetAudience: "Large businesses, enterprises, or organizations with custom requirements.",
+    highlights: [
+      "Customizable for large-scale projects",
+      "Includes CMS or e-commerce functionality",
+      "Comprehensive post-launch support",
+    ],
+    notes: "This package is tailored for businesses that need a scalable, feature-rich solution.",
+  },
+];
+
+export const detailsSectionData = {
+  heading: "Why Choose Us?",
+  cards: [
+    {
+      title: "🚀 Fast Turnaround Time",
+      description: "Get your website delivered on time, every time.",
+    },
+    {
+      title: "📈 Scalable Solutions",
+      description: "From startups to enterprises, we cater to all.",
+    },
+    {
+      title: "💡 Expert Support",
+      description: "Our team is here to assist you at every step.",
+    },
+    {
+      title: "🔧 Customizable Plans",
+      description: "Tailored solutions to meet your unique needs.",
+    },
+  ],
+};
+
+export const faqSectionData = [
+  {
+    question: "What is included in the Starter Plan?",
+    answer:
+      "The Starter Plan includes 1 static page, mobile-responsive design, basic SEO setup, SSL integration, and delivery within 3 days.",
+  },
+  {
+    question: "Can I upgrade my plan later?",
+    answer:
+      "Yes, you can upgrade your plan at any time. Contact our support team to discuss your requirements.",
+  },
+  {
+    question: "Do you offer post-launch support?",
+    answer:
+      "Yes, post-launch support is included in the Enterprise Plan. For other plans, support can be added as an additional service.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "Simply choose a plan and click the corresponding button. You can also contact us for a custom solution.",
   },
 ];

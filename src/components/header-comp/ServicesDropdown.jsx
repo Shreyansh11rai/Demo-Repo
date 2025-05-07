@@ -37,7 +37,7 @@ const ServicesDropdown = ({data}) => {
                 >
                 <Link
                   onMouseEnter={() => handlelist(index)}
-                  href={menu.title.split(' ').join("-").toLowerCase()}
+                  href={menu.href ? menu.href : menu.title.split(' ').join("-").toLowerCase()}
                   className="flex w-full items-center justify-between hover:text-black focus:outline-none"
                 >
                   <svg

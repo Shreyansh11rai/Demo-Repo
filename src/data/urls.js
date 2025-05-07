@@ -1,0 +1,8 @@
+export const urls = {
+  social: {
+    facebook: "https://facebook.com",
+    twitter: "https://twitter.com",
+    linkedin: "https://linkedin.com",
+    instagram: "https://instagram.com",
+  }
+};

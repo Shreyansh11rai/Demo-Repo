@@ -9,12 +9,13 @@ const CenterDropdown = ({ data, activeList }) => {
           className={`transition-all duration-500 ${activeList !== ind ? "h-0 overflow-hidden" : "h-40"}`}
         >
           <nav className="flex flex-col gap-4">
-            {ele.links.map((Element, index) => {
-              const slug = Element.split(" ").join("-").toLowerCase();
+            {ele.links.map((item, index) => {
+              let slug;
+              if(!item.href){slug = item.split(" ").join("-").toLowerCase() ;};
               return (
                 <Link
                   key={index}
-                  href={`/${slug}`}
+                  href={slug ? `/${slug}` : item.href}
                   className="flex items-center justify-between border-b border-gray-400 hover:font-medium hover:text-black"
                 >
                   <svg
@@ -25,7 +26,7 @@ const CenterDropdown = ({ data, activeList }) => {
                   >
                     <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
                   </svg>
-                  {Element}
+                  {slug ? item : item.name}
                 </Link>
               );
             })}

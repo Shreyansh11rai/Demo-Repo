@@ -5,7 +5,7 @@ export const BoldBtn = ({ text, className, target = "/" }) => {
   return (
     <Link
     href={target}
-      className={`btn rounded-lg border bg-primaryclr px-3 py-2 text-black transition-all duration-200 hover:scale-95 hover:border-blue-600 hover:bg-white hover:text-blue-600 md:px-5 md:py-1${className}`}
+      className={`btn rounded-lg border bg-primaryclr px-3 py-2 text-black transition-all duration-200 hover:scale-95 hover:border-blue-600 hover:bg-white hover:text-blue-600 md:px-5 md:py-3 ${className}`}
     >
       {text}
     </Link>

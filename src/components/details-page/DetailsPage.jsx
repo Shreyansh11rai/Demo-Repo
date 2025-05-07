@@ -21,7 +21,7 @@ export default function DetailsPage({service}) {
           {/* Image */}
           <div className="my-10 justify-center bg-slate-500 rounded-lg overflow-hidden hidden lg:flex">
             <Image
-              src="/website-services/custom-web.svg"
+              src="/custom-web.svg"
               alt={service.title}
               width={400}
               height={300}

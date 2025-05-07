@@ -3,8 +3,7 @@ import { headerData } from "@/data/homepage-data/headerData";
 import Link from "next/link";
 import { useState } from "react";
 
-
-export default function Hamburger({}) {
+export default function Hamburger() {
   const [mobNav, setMobNav] = useState(false);
   const [openService, setOpenService] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState({});
@@ -35,91 +34,103 @@ export default function Hamburger({}) {
       >
         <ul className="flex w-[90%] flex-col items-end gap-4 font-medium *:w-full *:border-b *:border-gray-700 *:pr-2 *:text-right *:text-xl">
           {headerData.navigation.map((item, index) => {
-            return !item.dropdown ? 
-            // if dropdown true isnt found it'll render normal link
-            <li key={index}>
-              <Link href={item.href}>{item.name}</Link>
-            </li> : 
+            !item.dropdown && (
+              // if dropdown true isnt found it'll render normal link
+              <li key={index}>
+                <Link href={item.href}>{item.name}</Link>
+              </li>
+            );
             // if dropdown true is found it'll render dropdown
-          <li className="flex flex-col items-end" key={index}>
-            {/* btn to open submenu  */}
-            <button
-              onClick={() => setOpenService(!openService)}
-              className="flex w-full items-center justify-between focus:outline-none"
-            >
-              <svg
-                className={`transition-300 h-6 transition-all ${
-                  openService ? "" : "rotate-180"
-                }`}
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
-              </svg>
-              {item.name}
-            </button>
-            {/* main submenu container*/}
-            <ul
-              className={`main-submenu overflow-hidden transition-all duration-300 ${
-                openService ? "max-h-[50vh] opacity-100" : "max-h-0 opacity-0"
-              } my-2 flex w-full flex-col items-end gap-3 overflow-y-auto rounded-md px-2 text-lg text-gray-700`}
-            >
-              {/* array of nav list  */}
-              {item.dropdownData.map((item, index) => (
-                // one submenu container
-                <li
-                key={index}
-                  className="flex w-full flex-col items-end gap-2"
+            console.log(item.dropdown);
+            
+            item.dropdown == "grouped" && (
+              <li className="flex flex-col items-end" key={index}>
+                {/* btn to open submenu  */}
+                <button
+                  onClick={() => setOpenService(!openService)}
+                  className="flex w-full items-center justify-between focus:outline-none"
                 >
-                  <button
-                    onClick={() => toggleSubMenu(index)}
-                    className="flex w-full items-center justify-between focus:outline-none"
+                  <svg
+                    className={`transition-300 h-6 transition-all ${
+                      openService ? "" : "rotate-180"
+                    }`}
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
                   >
-                    <svg
-                      className={`transition-300 h-6 transition-all ${
-                        openSubMenu[index] ? "" : "rotate-180"
-                      }`}
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
+                    <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
+                  </svg>
+                  {item.name}
+                </button>
+                {/* main submenu container*/}
+                <ul
+                  className={`main-submenu overflow-hidden transition-all duration-300 ${
+                    openService
+                      ? "max-h-[50vh] opacity-100"
+                      : "max-h-0 opacity-0"
+                  } my-2 flex w-full flex-col items-end gap-3 overflow-y-auto rounded-md px-2 text-lg text-gray-700`}
+                >
+                  {/* array of nav list  */}
+                  {item.dropdownData.map((item, index) => (
+                    // one submenu container
+                    <li
+                      key={index}
+                      className="flex w-full flex-col items-end gap-2"
                     >
-                      <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
-                    </svg>
-                    {item.title}
-                  </button>
-                  <ul
-                    className={`overflow-hidden transition-all duration-300 ${
-                      openSubMenu[index]
-                        ? "max-h-max opacity-100"
-                        : "max-h-0 opacity-0"
-                    } flex flex-col items-end gap-1 text-base font-normal`}
-                  >
-                    {
-                      item.links.map((item,index)=>
-                      <li className="" key={index}>
-                        <a
-                          href={item.split(" ").join("-").toLocaleLowerCase()}
-                          className="flex items-center justify-between gap-3"
+                      <button
+                        onClick={() => toggleSubMenu(index)}
+                        className="flex w-full items-center justify-between focus:outline-none"
+                      >
+                        <svg
+                          className={`transition-300 h-6 transition-all ${
+                            openSubMenu[index] ? "" : "rotate-180"
+                          }`}
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
                         >
-                          <svg
-                            className="h-6"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                          >
-                            <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
-                          </svg>
-                          {item}
-                        </a>
-                      </li>
-                      )
-                    }
-                  </ul>
-                </li>
-              ))}
-            </ul>
-          </li>
+                          <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
+                        </svg>
+                        {item.title}
+                      </button>
+                      <ul
+                        className={`overflow-hidden transition-all duration-300 ${
+                          openSubMenu[index]
+                            ? "max-h-max opacity-100"
+                            : "max-h-0 opacity-0"
+                        } flex flex-col items-end gap-1 text-base font-normal`}
+                      >
+                        {item.links.map((item, index) => (
+                          <li className="" key={index}>
+                            <a
+                              href={
+                                item.href
+                                  ? item.href
+                                  : item
+                                      .split(" ")
+                                      .join("-")
+                                      .toLocaleLowerCase()
+                              }
+                              className="flex items-center justify-between gap-3"
+                            >
+                              <svg
+                                className="h-6"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                              >
+                                <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                              </svg>
+                              {item.name ? item.name : item}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            );
           })}
         </ul>
         <button
