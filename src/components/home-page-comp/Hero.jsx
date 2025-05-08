@@ -3,7 +3,7 @@ import Image from "next/image";
 import { AnchorBoldBtn } from "../Buttons";
 import Wrapper from "../Container";
 import { heroSectionData } from "@/data/homepage-data/heroSectionData";
-import { contactPageLink, mobileNumberLink } from "@/data/globalData";
+import { contactPageLink } from "@/data/urls";
 
 export default function Hero() {
   return (

@@ -39,38 +39,5 @@ const Header = () => {
     </Wrapper>
   );
 };
-export const Header2 = () => {
-  const router = useRouter();
-  return (
-    <Wrapper>
-      <header className="flex items-center justify-between border-b border-gray-300 py-2">
-        {/* logo */}
-        <div className="logo flex items-center gap-5">
-          <Link
-            href={headerData.logo.href}
-            className="text-xl font-bold sm:text-2xl"
-          >
-            {headerData.logo.name}
-          </Link>
-          <button
-            onClick={() => router.back()}
-            className="text-blue-600 underline hover:text-blue-800"
-          >
-            ← Go Back
-          </button>
-        </div>
-        {/* action btn  */}
-        <div className="flex items-center gap-5">
-          <BoldBtn
-            text={headerData.button.text}
-            target={headerData.button.href}
-          />
-          {/* hamburger */}
-          <Hamburger />
-        </div>
-      </header>
-    </Wrapper>
-  );
-};
 
 export default Header;

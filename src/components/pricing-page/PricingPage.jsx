@@ -1,13 +1,13 @@
-import { contactPageLink } from "@/data/globalData";
+import { contactPageLink } from "@/data/urls";
 import { AnchorBoldBtn, BoldBtn } from "../Buttons";
 import CTA from "../CTA";
-import Header from "../header-comp/Header";
 import {
   heroSectionData,
   pricingPlansData,
   detailsSectionData,
   faqSectionData,
 } from "@/data/pricingPageData";
+import Link from "next/link";
 
 export default function PricingPage() {
   return (
@@ -106,12 +106,12 @@ export default function PricingPage() {
             ))}
           </div>
           <div className="text-center mt-8">
-            <a
+            <Link
               href="/faq"
               className="text-cyan-600 hover:underline text-lg font-medium"
             >
               View More FAQs →
-            </a>
+            </Link>
           </div>
         </section>
 

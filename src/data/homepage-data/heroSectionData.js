@@ -1,4 +1,4 @@
-import { contactPageLink } from "../globalData";
+import { contactPageLink } from "../urls";
 
 export const heroSectionData = {
     capsuleheading : ["Innovative Websites", " Secure Hosting", "Scalable E-commerce"],

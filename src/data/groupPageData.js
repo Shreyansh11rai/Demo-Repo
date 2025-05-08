@@ -1,5 +1,3 @@
-import { contactPageLink, supportPageLink } from "./globalData";
-
 export const groupPageData = [
   {
     title: "Website Design", // Added title

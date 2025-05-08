@@ -1,4 +1,3 @@
-import { contactPageLink } from "@/data/globalData";
 import Container from "../Container";
 import Link from "next/link";
 import { AnchorBoldBtn } from "../Buttons";

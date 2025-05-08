@@ -4,8 +4,8 @@ import ServiceOverView from "../ServiceOverView";
 export default function OurServices() {
   
   return (
-    servicesSectionData.map((item)=>
-      <ServiceOverView data={item}/>
+    servicesSectionData.map((item,index)=>
+      <ServiceOverView data={item} key={index}/>
     )
   )
 }

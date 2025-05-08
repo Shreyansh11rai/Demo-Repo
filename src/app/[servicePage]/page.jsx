@@ -17,11 +17,19 @@ export async function generateMetadata({ params }) {
 
   // Return metadata based on the matched service or service group
   if (service) {
-    return { title: service.title }; // Metadata for individual service
+    return {
+      title: service.title,
+      description: service.description || "Default description for the service.",
+      keywords: service.keywords || ["default", "keywords"],
+    }; // Metadata for individual service
   }
   if (serviceGroupPage) {
-    return { title: serviceGroupPage.title }; // Metadata for grouped service
-  }
+    return {
+      title: serviceGroupPage.title,
+      description: serviceGroupPage.subHeading || "Default description for the group.",
+      keywords: serviceGroupPage.keywords || ["default", "keywords"],
+    };
+  } // Metadata for grouped service
 }
 
 // Function to generate static paths for all services and service groups
@@ -63,10 +71,10 @@ export default async function page({ params }) {
   return (
     <>
       {/* Render individual service details */}
-      {service && <DetailsPage service={service} />} 
+      {service && <DetailsPage service={service} />}
       {/* Render grouped service detail */}
       {serviceGroupPage && (
-        <ServiceGroupPage groupPageData={serviceGroupPage} /> 
+        <ServiceGroupPage groupPageData={serviceGroupPage} />
       )}
     </>
   );

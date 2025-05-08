@@ -1,6 +1,6 @@
 import { heroSectionData, featuresPageData } from "@/data/featuresPageData";
 import CTA from "../CTA";
-import Header from "../header-comp/Header";
+import Image from "next/image"; // Import the Image component
 
 export default function FeaturesPage() {
   return (
@@ -26,15 +26,23 @@ export default function FeaturesPage() {
           >
             {/* Image Section */}
             <div className="w-full md:w-1/2">
-              <img
-                src={"/blogging.svg"}
+              <Image
+                src={"/blogging.svg"} // Replace img with Image
                 alt={feature.title}
                 className="rounded-lg shadow-lg"
+                width={500} // Add width
+                height={300} // Add height
               />
             </div>
 
             {/* Text Section */}
-            <div className={`w-full md:w-1/2 md:pl-12 p-5 ${index % 2 === 0 ? "border-l-2 border-gray-400 rounded-3xl" : "border-r-2 border-gray-400 rounded-3xl"}`}>
+            <div
+              className={`w-full md:w-1/2 md:pl-12 p-5 ${
+                index % 2 === 0
+                  ? "border-l-2 border-gray-400 rounded-3xl"
+                  : "border-r-2 border-gray-400 rounded-3xl"
+              }`}
+            >
               <h2 className="text-3xl font-bold mb-4">{feature.title}</h2>
               <p className="text-lg text-gray-600 mb-4">{feature.subtext}</p>
               <p className="text-gray-700 mb-6">{feature.description}</p>

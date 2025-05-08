@@ -1,6 +1,6 @@
 "use client";
-import { contactPageLink, enquiryLink, mobileNumberLink, whatsappLink } from "@/data/globalData";
 import { ctaData } from "@/data/homepage-data/ctaSectionData";
+import {contactPageLink, phoneNumber, phoneUrl, whatsappLink } from "@/data/urls";
 import Link from "next/link";
 
 export default function CTA({className}) {
@@ -19,10 +19,10 @@ export default function CTA({className}) {
             WhatsApp Us
           </Link>   
           <a
-            href={mobileNumberLink}
+            href={phoneUrl}
             className="bg-blue-600 hover:bg-blue-700 px-6 py-3 text-white rounded-lg shadow-md transition duration-300"
           >
-            Call Us
+            {phoneNumber}
           </a>
           <Link
             href={contactPageLink}

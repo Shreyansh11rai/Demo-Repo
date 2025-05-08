@@ -1,4 +1,4 @@
-import {mobileNumberLink } from "../globalData";
+import { phoneNumberUrl } from "@/constants/urls";
 
 export const headerData = {
   // add image path to give logo, always give href,you can use text as logo
@@ -10,10 +10,6 @@ export const headerData = {
     // visible links and href on navbar name can be changed but do remember to fill the href correctly use only "-" to separate words.
     // you can change order here and it'll show up on front-end also
     { name: "Home", href: "/" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Templates & UI Design ", href: "/templates-and-ui-design" },
-    { name: "Features", href: "/features" },
-    // follow same pattern for dropdown menu
     {
       // visible name in navbar for dropdown toggle on hover
       name: "Services",
@@ -61,6 +57,10 @@ export const headerData = {
         },
       ],
     },
+    { name: "Templates & UI Design ", href: "/templates-and-ui-design" },
+    { name: "Features", href: "/features" },
+    { name: "Pricing", href: "/pricing" },
+    // follow same pattern for dropdown menu
     // simple list dropdown sample. write dropdown:"listed" to make it work. if it needs Link than send href otherwise send name only 
     {name : "more", dropdown : "none", dropdownData : [
       {
@@ -76,6 +76,6 @@ export const headerData = {
   // rightmost button
   button: {
     text: "Book a service ",
-    href: mobileNumberLink,
+    href: phoneNumberUrl,
   },
 };

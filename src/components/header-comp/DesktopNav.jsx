@@ -5,7 +5,7 @@ import ActiveLink from "@/components/ActiveLink"
 import ListDropdown from "./ListDropdown";
 const DesktopNav = () => {
   return (
-    <nav className="hidden lg:flex flex-1 ml-20">
+    <nav className="hidden xl:flex flex-1 ml-20">
       <ul className="flex items-center text-sm text-gray-600 *:p-3">
         {
           headerData.navigation.map((item, idx)=>{
